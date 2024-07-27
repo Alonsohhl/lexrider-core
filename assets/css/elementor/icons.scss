@@ -1,0 +1,411 @@
+@font-face {
+    font-family: "opal-icon";
+    src: url('fonts/opal-icon.eot');
+    src: url('fonts/opal-icon.eot?#iefix') format('eot'),
+    url('fonts/opal-icon.woff2') format('woff2'),
+    url('fonts/opal-icon.woff') format('woff'),
+    url('fonts/opal-icon.ttf') format('truetype'),
+    url('fonts/opal-icon.svg#opal-icon') format('svg');
+}
+
+[class*="opal-icon-"]:before{
+    font-family: "opal-icon";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    text-decoration: none;
+    text-transform: none;
+}
+
+.opal-icon {
+    font-family: "opal-icon";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    text-decoration: none;
+    text-transform: none;
+}
+
+@function opal-icon-char($filename) {
+    $char: "";
+
+    @if $filename == arrow-left {
+    $char: "\E001";
+}
+    @if $filename == arrow-right {
+    $char: "\E002";
+}
+    @if $filename == award {
+    $char: "\E003";
+}
+    @if $filename == bars {
+    $char: "\E004";
+}
+    @if $filename == cart-empty {
+    $char: "\E005";
+}
+    @if $filename == check {
+    $char: "\E006";
+}
+    @if $filename == chevron-down {
+    $char: "\E007";
+}
+    @if $filename == chevron-left {
+    $char: "\E008";
+}
+    @if $filename == chevron-right {
+    $char: "\E009";
+}
+    @if $filename == chevron-up {
+    $char: "\E00A";
+}
+    @if $filename == circle {
+    $char: "\E00B";
+}
+    @if $filename == cogs {
+    $char: "\E00C";
+}
+    @if $filename == compare {
+    $char: "\E00D";
+}
+    @if $filename == credit-card {
+    $char: "\E00E";
+}
+    @if $filename == decor-left {
+    $char: "\E00F";
+}
+    @if $filename == decor-right {
+    $char: "\E010";
+}
+    @if $filename == diamond {
+    $char: "\E011";
+}
+    @if $filename == download {
+    $char: "\E012";
+}
+    @if $filename == email {
+    $char: "\E013";
+}
+    @if $filename == envelope-open-text {
+    $char: "\E014";
+}
+    @if $filename == filter {
+    $char: "\E015";
+}
+    @if $filename == heart-remove {
+    $char: "\E016";
+}
+    @if $filename == heart {
+    $char: "\E017";
+}
+    @if $filename == helmet {
+    $char: "\E018";
+}
+    @if $filename == home-lg-alt {
+    $char: "\E019";
+}
+    @if $filename == home-lg {
+    $char: "\E01A";
+}
+    @if $filename == location-circle {
+    $char: "\E01B";
+}
+    @if $filename == location {
+    $char: "\E01C";
+}
+    @if $filename == long-arrow-down {
+    $char: "\E01D";
+}
+    @if $filename == long-arrow-up {
+    $char: "\E01E";
+}
+    @if $filename == menu {
+    $char: "\E01F";
+}
+    @if $filename == minus {
+    $char: "\E020";
+}
+    @if $filename == motocross {
+    $char: "\E021";
+}
+    @if $filename == motorcycle {
+    $char: "\E022";
+}
+    @if $filename == mouse-pointer {
+    $char: "\E023";
+}
+    @if $filename == phone-square {
+    $char: "\E024";
+}
+    @if $filename == phone {
+    $char: "\E025";
+}
+    @if $filename == pistons {
+    $char: "\E026";
+}
+    @if $filename == play {
+    $char: "\E027";
+}
+    @if $filename == plus {
+    $char: "\E028";
+}
+    @if $filename == quickview {
+    $char: "\E029";
+}
+    @if $filename == quote-left {
+    $char: "\E02A";
+}
+    @if $filename == safe {
+    $char: "\E02B";
+}
+    @if $filename == search {
+    $char: "\E02C";
+}
+    @if $filename == shopping-cart {
+    $char: "\E02D";
+}
+    @if $filename == sign-in {
+    $char: "\E02E";
+}
+    @if $filename == sign-out {
+    $char: "\E02F";
+}
+    @if $filename == sliders-v {
+    $char: "\E030";
+}
+    @if $filename == speedometer {
+    $char: "\E031";
+}
+    @if $filename == star {
+    $char: "\E032";
+}
+    @if $filename == support-heart {
+    $char: "\E033";
+}
+    @if $filename == tachometer-alt-fastest {
+    $char: "\E034";
+}
+    @if $filename == thermometer-full {
+    $char: "\E035";
+}
+    @if $filename == times {
+    $char: "\E036";
+}
+    @if $filename == tyre {
+    $char: "\E037";
+}
+    @if $filename == user-circle {
+    $char: "\E038";
+}
+    @if $filename == user-friends {
+    $char: "\E039";
+}
+    @if $filename == user-headset {
+    $char: "\E03A";
+}
+    @if $filename == user {
+    $char: "\E03B";
+}
+    @if $filename == users-class {
+    $char: "\E03C";
+}
+    @if $filename == users {
+    $char: "\E03D";
+}
+
+@return $char;
+}
+
+@mixin opal-icon($filename, $insert: before) {
+&:#{$insert} {
+    content: opal-icon-char($filename);
+}
+}
+
+.opal-icon-arrow-left {
+    @include opal-icon(arrow-left);
+}
+.opal-icon-arrow-right {
+    @include opal-icon(arrow-right);
+}
+.opal-icon-award {
+    @include opal-icon(award);
+}
+.opal-icon-bars {
+    @include opal-icon(bars);
+}
+.opal-icon-cart-empty {
+    @include opal-icon(cart-empty);
+}
+.opal-icon-check {
+    @include opal-icon(check);
+}
+.opal-icon-chevron-down {
+    @include opal-icon(chevron-down);
+}
+.opal-icon-chevron-left {
+    @include opal-icon(chevron-left);
+}
+.opal-icon-chevron-right {
+    @include opal-icon(chevron-right);
+}
+.opal-icon-chevron-up {
+    @include opal-icon(chevron-up);
+}
+.opal-icon-circle {
+    @include opal-icon(circle);
+}
+.opal-icon-cogs {
+    @include opal-icon(cogs);
+}
+.opal-icon-compare {
+    @include opal-icon(compare);
+}
+.opal-icon-credit-card {
+    @include opal-icon(credit-card);
+}
+.opal-icon-decor-left {
+    @include opal-icon(decor-left);
+}
+.opal-icon-decor-right {
+    @include opal-icon(decor-right);
+}
+.opal-icon-diamond {
+    @include opal-icon(diamond);
+}
+.opal-icon-download {
+    @include opal-icon(download);
+}
+.opal-icon-email {
+    @include opal-icon(email);
+}
+.opal-icon-envelope-open-text {
+    @include opal-icon(envelope-open-text);
+}
+.opal-icon-filter {
+    @include opal-icon(filter);
+}
+.opal-icon-heart-remove {
+    @include opal-icon(heart-remove);
+}
+.opal-icon-heart {
+    @include opal-icon(heart);
+}
+.opal-icon-helmet {
+    @include opal-icon(helmet);
+}
+.opal-icon-home-lg-alt {
+    @include opal-icon(home-lg-alt);
+}
+.opal-icon-home-lg {
+    @include opal-icon(home-lg);
+}
+.opal-icon-location-circle {
+    @include opal-icon(location-circle);
+}
+.opal-icon-location {
+    @include opal-icon(location);
+}
+.opal-icon-long-arrow-down {
+    @include opal-icon(long-arrow-down);
+}
+.opal-icon-long-arrow-up {
+    @include opal-icon(long-arrow-up);
+}
+.opal-icon-menu {
+    @include opal-icon(menu);
+}
+.opal-icon-minus {
+    @include opal-icon(minus);
+}
+.opal-icon-motocross {
+    @include opal-icon(motocross);
+}
+.opal-icon-motorcycle {
+    @include opal-icon(motorcycle);
+}
+.opal-icon-mouse-pointer {
+    @include opal-icon(mouse-pointer);
+}
+.opal-icon-phone-square {
+    @include opal-icon(phone-square);
+}
+.opal-icon-phone {
+    @include opal-icon(phone);
+}
+.opal-icon-pistons {
+    @include opal-icon(pistons);
+}
+.opal-icon-play {
+    @include opal-icon(play);
+}
+.opal-icon-plus {
+    @include opal-icon(plus);
+}
+.opal-icon-quickview {
+    @include opal-icon(quickview);
+}
+.opal-icon-quote-left {
+    @include opal-icon(quote-left);
+}
+.opal-icon-safe {
+    @include opal-icon(safe);
+}
+.opal-icon-search {
+    @include opal-icon(search);
+}
+.opal-icon-shopping-cart {
+    @include opal-icon(shopping-cart);
+}
+.opal-icon-sign-in {
+    @include opal-icon(sign-in);
+}
+.opal-icon-sign-out {
+    @include opal-icon(sign-out);
+}
+.opal-icon-sliders-v {
+    @include opal-icon(sliders-v);
+}
+.opal-icon-speedometer {
+    @include opal-icon(speedometer);
+}
+.opal-icon-star {
+    @include opal-icon(star);
+}
+.opal-icon-support-heart {
+    @include opal-icon(support-heart);
+}
+.opal-icon-tachometer-alt-fastest {
+    @include opal-icon(tachometer-alt-fastest);
+}
+.opal-icon-thermometer-full {
+    @include opal-icon(thermometer-full);
+}
+.opal-icon-times {
+    @include opal-icon(times);
+}
+.opal-icon-tyre {
+    @include opal-icon(tyre);
+}
+.opal-icon-user-circle {
+    @include opal-icon(user-circle);
+}
+.opal-icon-user-friends {
+    @include opal-icon(user-friends);
+}
+.opal-icon-user-headset {
+    @include opal-icon(user-headset);
+}
+.opal-icon-user {
+    @include opal-icon(user);
+}
+.opal-icon-users-class {
+    @include opal-icon(users-class);
+}
+.opal-icon-users {
+    @include opal-icon(users);
+}

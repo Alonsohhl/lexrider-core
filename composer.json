@@ -1,0 +1,17 @@
+
+{
+  "name": "alonsohhl/lexrider-core",
+  "description": "",
+  "keywords": ["wordpress", "plugin"],
+  "homepage": "https://github.com/Alonsohhl/lexrider-core",
+  "authors": [
+    {
+      "name": "Alonso Huayta",
+      "homepage": "https://originalpluginurl.com"
+    }
+  ],
+  "type": "wordpress-plugin",
+  "require": {
+    "php": ">=8.0"
+  }
+}
